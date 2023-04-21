@@ -19,16 +19,16 @@ def timer(days):
             )
     api = tweepy.API(auth)
  
-    media = api.media_upload(f"images/{days}.png")
-    tweet = f"Days left till Buhari leaves Aso Rock: {days} \n#BuhariCountdown"
+    media = api.media_upload(f"images/{days}.jpg")
+    tweet = f"Moment of disaster in frames: {days} \n#EidUlFitr"
     api.update_status(status=tweet, media_ids=[media.media_id])
     return
 
 def main():
-    days=829
-    for i in range(1,829):
-        timer(days-i)
-        time.sleep(86400)
+    days=110
+    for i in range(327):
+        timer(days+i)
+        time.sleep(60)
 
 if __name__ == "__main__":
     main()
